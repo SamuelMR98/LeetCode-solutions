@@ -6,11 +6,15 @@ class ListNode:
 class Solution:
     ans = []
     def addTwoNumbers(self, l1:list, l2:list) -> list:
+        l1.reverse()
+        l2.reverse()
         n1 = ''.join(str(e) for e in l1)
         n2 = ''.join(str(e) for e in l2)
         sum = int(n1) + int(n2)
         sum = str(sum)
-        return list(sum)
+        sum = list(sum)
+        sum.reverse()
+        return sum
     
 l1 = [2,4,3]
 l2 = [5,6,4]
